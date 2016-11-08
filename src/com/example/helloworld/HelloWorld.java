@@ -1,5 +1,9 @@
 package com.example.helloworld;
 
+import com.ib.arrays.RotateMatrix;
+
+import java.util.ArrayList;
+
 /**
  * Created by ummehunn on 10/28/2016.
  */
@@ -65,7 +69,35 @@ public class HelloWorld {
         int out1 = m.maxSubArray(in1);
         System.out.println(out1);*/
 
+        /* Testing max Set*/
+        /*MaxSet m = new MaxSet();
+        ArrayList<Integer> in1 = new ArrayList<>(0);
+        //1, 2, 5, -7, 2, 5
+        *//*in1.add(1);
+        in1.add(2);
+        in1.add(5);
+        in1.add(-7);
+        in1.add(2);
+        in1.add(5);*//*
+        in1.add(0);
+        in1.add(-1);
+        in1.add(0);
+        in1.add(0);
+        ArrayList<Integer> out = m.maxset(in1);
+        for(int i = 0; i<out.size(); i++){
+            System.out.println(out.get(i));
+        }*/
 
+        /* Testing matrix rotate */
+        RotateMatrix m = new RotateMatrix();
+        ArrayList<ArrayList<Integer>> a = m.populateArrayWithSampleData(2);
+        m.rotate(a);
+        for(int i = 0; i<a.size(); i++){
+            for(int j= 0; j<a.size(); j++){
+                System.out.println(a.get(i).get(j));
+            }
+
+        }
 
     }
 
