@@ -1,8 +1,10 @@
 package com.example.helloworld;
 
-import com.ib.arrays.RotateMatrix;
+import com.ib.arrays.Sort;
+import com.ib.arrays.Utility;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by ummehunn on 10/28/2016.
@@ -89,7 +91,7 @@ public class HelloWorld {
         }*/
 
         /* Testing matrix rotate */
-        RotateMatrix m = new RotateMatrix();
+        /*RotateMatrix m = new RotateMatrix();
         ArrayList<ArrayList<Integer>> a = m.populateArrayWithSampleData(2);
         m.rotate(a);
         for(int i = 0; i<a.size(); i++){
@@ -97,7 +99,33 @@ public class HelloWorld {
                 System.out.println(a.get(i).get(j));
             }
 
-        }
+        }*/
+
+        /* Testing selection sort */
+//        ArrayList<Integer> a = new ArrayList<Integer>(Arrays.asList(3,9,0,2,4,7,8, -1));
+//        Sort s = new Sort();
+//        a = s.selectionSort(a);
+//        Utility.printArray(a);
+
+        /* Testing selection sort */
+/*
+        ArrayList<Integer> a1 = new ArrayList<Integer>(Arrays.asList(3,9,0,2,4,7,8, -1));
+        Sort s1 = new Sort();
+        a1 = s.bubbleSort(a1);
+        Utility.printArray(a1);
+*/
+
+        /* Testing insertion sort */
+        /*ArrayList<Integer> a2 = new ArrayList<Integer>(Arrays.asList(3,9,0,2,4,7,8, -1));
+        Sort s2 = new Sort();
+        a2 = s2.bubbleSort(a2);
+        Utility.printArray(a2);*/
+
+        /* Testing merge sort */
+        ArrayList<Integer> a2 = new ArrayList<Integer>(Arrays.asList(3,9,0,2,4,7,8, -1));
+        Sort s2 = new Sort();
+        s2.quickSort(a2, 0, 7);
+        Utility.printArray(a2);
 
     }
 
