@@ -2,8 +2,10 @@ package com.example.helloworld;
 
 import com.ib.arrays.Interval;
 import com.ib.arrays.SetMatrixZeroes;
+import com.ib.arrays.Utility;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by ummehunn on 10/28/2016.
@@ -11,12 +13,23 @@ import java.util.ArrayList;
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Testing interviewBits Problems");
+        testSetMatrixZeroes();
     }
 
 
-    public void testSetMatrixZeroes(){
+    public static void testSetMatrixZeroes(){
         SetMatrixZeroes smz = new SetMatrixZeroes();
         ArrayList<ArrayList<Integer>> a = new ArrayList<ArrayList<Integer>>();
+        /*a.add(new ArrayList<Integer>(Arrays.asList(1,0,1,0)));
+        a.add(new ArrayList<Integer>(Arrays.asList(1,1,1,1)));
+        a.add(new ArrayList<Integer>(Arrays.asList(1,1,1,1 )));*/
+
+        a.add(new ArrayList<Integer>(Arrays.asList(0, 1)));
+        a.add(new ArrayList<Integer>(Arrays.asList(0,1)));
+
+        smz.setZeroes(a);
+        Utility.printArray2D(a);
+
 
     }
 
