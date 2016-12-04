@@ -1,8 +1,12 @@
 package com.example.helloworld;
 
-import com.ib.arrays.Interval;
-import com.ib.arrays.SetMatrixZeroes;
-import com.ib.arrays.Utility;
+import com.ib.arrays.*;
+import com.ib.bst.BinarySearchArray;
+import com.ib.math.*;
+import com.lc.mock.DecodeString;
+import com.pie.c3.Maze;
+import com.pie.c3.Permutations;
+import com.pie.c3.TelephoneNumbers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,7 +17,116 @@ import java.util.Arrays;
 public class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Testing interviewBits Problems");
-        testSetMatrixZeroes();
+        //testSetMatrixZeroes();
+        //testFindDuplicateInArray();
+        //testDecode();
+        //testPermutation();
+        //testTelephoneNumber();
+        //isPowerTest();
+        //testExcelColumn();
+        //testPalingdrome();
+        //testGCD();
+        //testReArrange();
+        //testGridUniquePath();
+        //testMaze();
+        //testPrettyPrint();
+        testBST();
+    }
+
+
+
+    public static void testBST(){
+        BinarySearchArray bsa = new BinarySearchArray();
+        //System.out.println(bsa.binarySerachArray(new ArrayList<Integer>(Arrays.asList(2, 4, 6, 8, 10, 11)), 10));
+        //System.out.println(bsa.binarySerachArray(new ArrayList<Integer>(Arrays.asList(2, 4, 6, 8, 10, 11)), 2));
+        //System.out.println(bsa.sqrt(2));
+        //System.out.println(bsa.sqrt(3));
+        //System.out.println(bsa.sqrt(4));
+        //System.out.println(bsa.findCount(new ArrayList<Integer>(Arrays.asList( 1, 2, 6, 9, 9 )), 2));
+        //System.out.println(bsa.findMin(new ArrayList<Integer>(Arrays.asList(4, 5, 6, 7, 0, 0, 1, 2))));
+        //System.out.println(bsa.searchRange(new ArrayList<Integer>(Arrays.asList(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10 )), 10));
+        System.out.println(bsa.pow(79161127, 99046373,57263970));
+        //System.out.println(bsa.pow(-1,1,20));
+        System.out.print(bsa.findMedianSortedArrays(new ArrayList<Integer>(Arrays.asList(1,4,5)), new ArrayList<Integer>(Arrays.asList(2,3))));
+    }
+
+    public static void testPrettyPrint(){
+        PrettyPrint pp = new PrettyPrint();
+        ArrayList<ArrayList<Integer>> p = pp.prettyPrint(4);
+        Utility.printArray2D(p);
+
+    }
+
+    public static void testMaze(){
+
+        Maze m = new Maze();
+        ArrayList<ArrayList<Integer>>  maze = new ArrayList<ArrayList<Integer>>();
+        maze.add(new ArrayList<Integer>(Arrays.asList( 1,5,5,5,0)));
+        maze.add(new ArrayList<Integer>(Arrays.asList( 0,5,0,0,0)));
+        maze.add(new ArrayList<Integer>(Arrays.asList( 0,5,0,5,0)));
+        maze.add(new ArrayList<Integer>(Arrays.asList( 0,5,0,0,0)));
+        maze.add(new ArrayList<Integer>(Arrays.asList( 0,5,5,5,9)));
+        m.solveMaze(maze);
+    }
+
+    public static void testGridUniquePath(){
+        GridUniquePath gp = new GridUniquePath();
+        System.out.println(gp.uniquePaths(3,3));
+    }
+
+    public static void testReArrange(){
+        ReArrangeArray r = new ReArrangeArray();
+        ArrayList<Integer> a =  new ArrayList<Integer>(Arrays.asList( 1 ,3, 4, 2, 0));
+        r.arrange(a);
+        Utility.printArray(a);
+
+    }
+
+    public static void testGCD(){
+        GCD g = new GCD();
+        System.out.println(g.gcd(2, 0));
+    }
+
+    public static void testPalingdrome(){
+        PalingdromeInteger p = new PalingdromeInteger();
+        System.out.println(p.isPalindrome(12121));
+    }
+
+    public static void testExcelColumn(){
+        ExcelColumnNumber ecn = new ExcelColumnNumber();
+        System.out.println(ecn.titleToNumber("BA"));
+    }
+
+    public static void isPowerTest(){
+        int a = -27;
+        IsPower ip = new IsPower();
+        boolean test =  ip.isPower( a);
+        System.out.print(ip.isPower(a));
+
+    }
+
+
+    public static void testTelephoneNumber(){
+        int[] a = {7, 8, 9, 2, 4, 5, 6};
+        TelephoneNumbers t = new TelephoneNumbers(a);
+        t.printWords(0);
+    }
+
+    public static void testPermutation(){
+        Permutations p = new Permutations("abcd");
+        p.permute();
+    }
+
+    public static void testDecode(){
+        DecodeString ds = new DecodeString();
+        String s = "3[a]2[bc]";//"sd2[f2[e]g]i";
+        System.out.println(ds.decodeString(s));
+    }
+
+    public static void testFindDuplicateInArray(){
+        ArrayList<Integer> a =  new ArrayList<Integer>(Arrays.asList(3,4,1,2,1));
+        FindDuplicateInArray f = new FindDuplicateInArray();
+        System.out.println(f.repeatedNumber(a));
     }
 
 
